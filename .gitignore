@@ -1,7 +1,11 @@
 logs
 dist
+build/
 *.egg-info
 *.pyc
+__pycache__/
 *.db
 config.inc.sh
 make_profile.db
+test/make.svg
+test/target11

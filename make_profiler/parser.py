@@ -48,7 +48,7 @@ def parse(fd):
     def parse_target(token):
         line = token[1]
         target, deps, order_deps, docstring = re.match(
-            '(.+): \s? ([^|#]+)? \s? [|]? \s? ([^##]+)? \s?  \s? ([#][#].+)?',
+            r'(.+): \s? ([^|#]+)? \s? [|]? \s? ([^##]+)? \s?  \s? ([#][#].+)?',
             line,
             re.X
         ).groups()

@@ -3,7 +3,7 @@ import sys
 import re
 from setuptools import setup
 
-MIN_PYTHON = (2, 7)
+MIN_PYTHON = (3, 12)
 if sys.version_info < MIN_PYTHON:
     sys.stderr.write("Python {}.{} or later is required\n".format(*MIN_PYTHON))
     sys.exit(1)
@@ -36,7 +36,7 @@ setup(
     packages=['make_profiler'],
     test_suite='test',
     install_requires=(
-        'more-itertools==2.4.1',
+        'more-itertools',
     ),
     entry_points={
         'console_scripts': [
@@ -48,7 +48,7 @@ setup(
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Topic :: Utilities',
-        'Programming Language :: Python',
+        'Programming Language :: Python :: 3.12',
         'License :: OSI Approved :: BSD License',
     ],
 )

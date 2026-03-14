@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "make-profiler"
+version = "1.0.0"
+authors = [
+  { name="Darafei Praliaskouski", email="komzpa@gojuno.com" },
+]
+maintainers = [
+  { name="Alexander Verbitsky", email="averbitsky@gojuno.com" },
+]
+description = "Profiler for Makefiles"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Utilities",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: BSD License",
+]
+dependencies = [
+    "more-itertools>=6.0.0",
+]
+
+[project.scripts]
+profile_make_clean = "make_profiler.cmd_clean:main"
+profile_make = "make_profiler.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/gojuno/make-profiler"

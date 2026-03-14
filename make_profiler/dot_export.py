@@ -56,7 +56,7 @@ def critical_path(influences, dependencies, inputs, timing):
     cp = set()
     timing_tags = {}
     for t, z in targets.items():
-        if z["early_start"] == z["late_start"]:
+        if z["early_start"] == z.get("late_start"):
             cp.add(t)
         if z["pin_timing_tag"]:
             if z["timing_tag"] not in timing_tags:
